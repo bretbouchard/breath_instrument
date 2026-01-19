@@ -1,15 +1,25 @@
 cmake_minimum_required(VERSION 3.26)
 project(BreathLead VERSION 1.0.0 LANGUAGES C CXX)
 
+#==============================================================================
+# MANDATORY: Use centralized JUCE detection
+#==============================================================================
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
+include(FindJUCE)
+
+if(NOT JUCE_FOUND)
+    message(FATAL_ERROR "JUCE is required but was not found. See juce_backend/cmake/FindJUCE.cmake for installation instructions.")
+endif()
+
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # Find JUCE
-set(JUCE_PATH "/Applications/JUCE" CACHE PATH "Path to JUCE")
 
-if(EXISTS "${JUCE_PATH}")
+if(JUCE_FOUND)
     add_subdirectory("${JUCE_PATH}" "${CMAKE_BINARY_DIR}/juce")
     set(JUCE_FOUND TRUE)
     message(STATUS "Found JUCE at: ${JUCE_PATH}")
@@ -43,17 +53,10 @@ if(JUCE_FOUND)
 
     target_sources(BreathLead
         PRIVATE
-            # Processor
-            include/plugin/BreathLeadProcessor.h
-            src/plugin/BreathLeadProcessor.cpp
-            # Plugin Factory
-            src/plugin/BreathLeadPlugin.cpp
-            # Editor
-            include/plugin/BreathLeadEditor.h
-            src/plugin/BreathLeadEditor.cpp
+            # AudioProcessor wrapper (newly created)
+            src/BreathLeadPlugin.cpp
             # DSP Voice (Pure DSP)
             include/dsp/BreathLeadVoice.h
-            src/dsp/BreathLeadVoice.cpp
     )
 
     # Add include directory for plugin headers
