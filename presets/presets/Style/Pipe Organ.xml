@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PRESET version="1" name="Pipe Organ" author="SchillingerEcosystem" plugin="BreathLead">
+  <VALUES>
+    <PARAM id="air" value="0.6"/>
+    <PARAM id="tone" value="0.6"/>
+    <PARAM id="formant" value="0.8"/>
+    <PARAM id="resistance" value="0.9"/>
+    <PARAM id="vibrato" value="0.0"/>
+  </VALUES>
+</PRESET>

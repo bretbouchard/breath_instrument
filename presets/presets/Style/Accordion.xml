@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PRESET version="1" name="Accordion" author="SchillingerEcosystem" plugin="BreathLead">
+  <VALUES>
+    <PARAM id="air" value="0.5"/>
+    <PARAM id="tone" value="0.5"/>
+    <PARAM id="formant" value="0.5"/>
+    <PARAM id="resistance" value="0.3"/>
+    <PARAM id="vibrato" value="0.0"/>
+  </VALUES>
+</PRESET>
