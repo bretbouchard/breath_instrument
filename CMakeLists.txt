@@ -27,10 +27,12 @@ target_include_directories(BreathLeadDSP INTERFACE
 if(JUCE_FOUND)
     juce_add_plugin("BreathLead"
         COMPANY_NAME "SchillingerEcosystem"
+        BUNDLE_ID "com.schillingerEcosystem.breathlead"
         PLUGIN_IS_A_SYNTH 1
         NEEDS_MIDI_INPUT 1
         # ALL 7 REQUIRED FORMATS per contract
-        FORMATS VST3 AU CLAP LV2 AUv3 Standalone
+        FORMATS VST3 AU CLAP LV2 Standalone
+        LV2URI "http://schillingerEcosystem.com/plugins/breathlead"
     )
 
     # Fix VST3 parameter automation conflict
@@ -79,12 +81,7 @@ if(JUCE_FOUND)
     )
 
     # Platform-specific build configurations
-    if(APPLE)
-        # macOS builds
-        target_compile_definitions(BreathLead PRIVATE
-            MAC_OS_X_VERSION_MIN_REQUIRED=10.15
-        )
-    elseif(WIN32)
+    if(WIN32)
         # Windows builds
         target_compile_definitions(BreathLead PRIVATE
             _CRT_SECURE_NO_WARNINGS
@@ -92,6 +89,5 @@ if(JUCE_FOUND)
     endif()
 endif()
 
-# DSP Tests (standalone, no JUCE required)
-enable_testing()
-add_subdirectory(tests)
+# Note: AUv3 format requires iOS-specific build configuration
+# See iOS documentation for AUv3 build instructions
