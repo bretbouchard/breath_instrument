@@ -14,10 +14,21 @@ Breath Lead is a **monophonic wind instrument synthesizer** designed for express
 
 ## Status
 
-✅ **Production Ready** - All 7 formats built and tested
+✅ **Production Ready** - 5 formats built and tested
 ✅ **33 Factory Presets** - Across 7 musical categories
 ✅ **Comprehensive Tests** - 21/21 test cases passing
 ✅ **Fully Documented** - 1100+ lines of documentation
+
+### Built Formats:
+- ✅ **VST3** - Built and tested
+- ✅ **AU** (macOS) - Built and tested
+- ✅ **LV2** - Built and tested
+- ✅ **Standalone** - Built and tested
+- ✅ **DSP** - Pure DSP engine
+
+### Planned Formats:
+- ⚠️ **CLAP** - Configuration complete (see CLAP_IMPLEMENTATION.md)
+- ⚠️ **AUv3** (iOS) - Documentation complete (see ios/README.md)
 
 ## Installation
 
@@ -80,7 +91,8 @@ cp -R build/BreathLead_artefacts/Standalone/BreathLead.app \
 
 - [User Guide](docs/BREATH_LEAD_USER_GUIDE.md) - 500+ lines
 - [Technical Guide](docs/BREATH_LEAD_TECHNICAL.md) - 600+ lines
-- [Integration Status](docs/BREATH_LEAD_INTEGRATION_STATUS.md)
+- [CLAP Implementation](CLAP_IMPLEMENTATION.md) - CLAP format guide
+- [AUv3 iOS Build](ios/README.md) - iOS AUv3 build instructions
 
 ## Requirements
 
