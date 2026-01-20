@@ -1,0 +1,71 @@
+@prefix lv2:   <http://lv2plug.in/ns/lv2core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pset:  <http://lv2plug.in/ns/ext/presets#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix ui:    <http://lv2plug.in/ns/extensions/ui#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<http://schillingerEcosystem.com/plugins/breathlead>
+	a lv2:Plugin ;
+	lv2:binary <libBreathLead.so> ;
+	rdfs:seeAlso <dsp.ttl> .
+<http://schillingerEcosystem.com/plugins/breathlead:preset1>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Soft Flute" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "0"^^xsd:int ; ] .
+
+<http://schillingerEcosystem.com/plugins/breathlead:preset2>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Expressive Clarinet" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "1"^^xsd:int ; ] .
+
+<http://schillingerEcosystem.com/plugins/breathlead:preset3>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Breathy Vocal" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "2"^^xsd:int ; ] .
+
+<http://schillingerEcosystem.com/plugins/breathlead:preset4>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Wind Chime" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "3"^^xsd:int ; ] .
+
+<http://schillingerEcosystem.com/plugins/breathlead:preset5>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Ambient Pad" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "4"^^xsd:int ; ] .
+
+<http://schillingerEcosystem.com/plugins/breathlead:preset6>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Ethereal" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "5"^^xsd:int ; ] .
+
+<http://schillingerEcosystem.com/plugins/breathlead:preset7>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Classical Flute" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "6"^^xsd:int ; ] .
+
+<http://schillingerEcosystem.com/plugins/breathlead:preset8>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Saxophone" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "7"^^xsd:int ; ] .
+
+<http://schillingerEcosystem.com/plugins/breathlead:preset9>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Oboe" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "8"^^xsd:int ; ] .
+
+<http://schillingerEcosystem.com/plugins/breathlead:preset10>
+	a pset:Preset ;
+	lv2:appliesTo <http://schillingerEcosystem.com/plugins/breathlead> ;
+	rdfs:label "Breath Controller" ;
+	state:state [ <http://schillingerEcosystem.com/plugins/breathlead:Program> "9"^^xsd:int ; ] .
+
