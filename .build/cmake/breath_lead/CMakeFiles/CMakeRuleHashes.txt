@@ -1,4 +1,0 @@
-# Hashes of file build rules.
-9eb5fe3b5e648d34f18d57d059adfd9b BreathLead_artefacts/JuceLibraryCode/BreathLead_AU/PkgInfo
-a680abc5b852719c910e569ae1c8da65 BreathLead_artefacts/JuceLibraryCode/BreathLead_Standalone/PkgInfo
-3df24f75be6f64c6918b4b9f520b255e BreathLead_artefacts/JuceLibraryCode/BreathLead_VST3/PkgInfo
